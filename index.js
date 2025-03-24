@@ -31,10 +31,11 @@ function uploadImage() {
   })
     .then((response) => response.json())
     .then((data) => {
-      if (data.data && data.data.url) {
+      console.log(data);
+      if (data.data && data.data.image && data.data.medium && data.data.thumb) {
         document.getElementById(
           "response"
-        ).innerHTML = `Imagem enviada com sucesso! <br/>Link: <a href="${data.data.url}" target="_blank">${data.data.url}</a>`;
+        ).innerHTML = `Link FULL: <a href="${data.data.image.url}" target="_blank">${data.data.image.url}</a> <br/> Link MEDIUM: <a href="${data.data.medium.url}" target="_blank">${data.data.medium.url}</a> <br/> Link THUMB: <a href="${data.data.thumb.url}" target="_blank">${data.data.thumb.url}</a>`;
       } else {
         document.getElementById("response").innerText =
           "Erro ao enviar a imagem.";
