@@ -1,0 +1,19 @@
+.h-dvh {
+  height: 100dvh;
+  font-size: 18px;
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#preview {
+    max-width: 300px;
+    max-height: 100px;
+    margin-top: 10px;
+    display: none;
+    border-radius: 10px;
+  }
